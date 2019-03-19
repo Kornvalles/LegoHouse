@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="DBAccess.UserMapperTest" time="3.41" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="DBAccess.UserMapperTest" time="2.775" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
@@ -15,9 +15,8 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/mikkel/Documents/GitHub/Modul3LogInSample-master"/>
+    <property name="user.dir" value="/Users/mikkel/Documents/GitHub/LegoHouse"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
-    <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
@@ -45,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/index.jsp -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="da"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -60,13 +59,12 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="DBAccess.UserMapperTest" name="testCreateUser01" time="2.072"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testLogin01" time="0.22"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testLogin02" time="0.235"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testLogin03" time="0.224"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testSetUpOK" time="0.193"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testCreateUser01" time="1.644"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testLogin01" time="0.219"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testLogin02" time="0.224"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testLogin03" time="0.226"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testSetUpOK" time="0.196"/>
 </testsuite>
