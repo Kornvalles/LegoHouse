@@ -1,6 +1,6 @@
 package FunctionLayer;
 
-import DBAccess.UserMapper;
+import DataLayer.UserMapper;
 
 /**
  * The purpose of LogicFacade is to...

@@ -1,4 +1,4 @@
-package DBAccess;
+package DataLayer;
 
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.User;
