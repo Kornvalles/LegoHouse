@@ -17,5 +17,9 @@ public class LogicFacade {
         UserMapper.createUser( user );
         return user;
     }
+    
+    public static Order createOrder( int length, int width, int height ) {
+        Order order = new Order(width, length, width, height);
+    }
 
 }
