@@ -22,9 +22,10 @@ public class OrderMapper {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO Orders (idusers, length, width, height) VALUES (?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
-            ps.setInt( 1, order.getLength() );
-            ps.setInt( 2, order.getWidth()  );
-            ps.setInt( 3, order.getHeight() );
+            ps.setInt( 1, order.getIdUser() );
+            ps.setInt( 2, order.getLength() );
+            ps.setInt( 3, order.getWidth()  );
+            ps.setInt( 4, order.getHeight() );
             ps.executeUpdate();
         } catch ( SQLException | ClassNotFoundException ex ) {
             throw new SQLException(ex.getMessage());
