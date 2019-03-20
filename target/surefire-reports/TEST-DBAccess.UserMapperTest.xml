@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="DBAccess.UserMapperTest" time="3.171" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="DBAccess.UserMapperTest" time="2.616" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
@@ -63,9 +63,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="DBAccess.UserMapperTest" name="testCreateUser01" time="1.871"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testLogin01" time="0.268"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testLogin02" time="0.267"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testLogin03" time="0.294"/>
-  <testcase classname="DBAccess.UserMapperTest" name="testSetUpOK" time="0.235"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testCreateUser01" time="1.475"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testLogin01" time="0.226"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testLogin02" time="0.237"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testLogin03" time="0.23"/>
+  <testcase classname="DBAccess.UserMapperTest" name="testSetUpOK" time="0.197"/>
 </testsuite>
