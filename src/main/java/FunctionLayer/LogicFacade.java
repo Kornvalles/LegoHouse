@@ -1,6 +1,9 @@
 package FunctionLayer;
 
+import DataLayer.OrderMapper;
 import DataLayer.UserMapper;
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * The purpose of LogicFacade is to...
@@ -18,8 +21,14 @@ public class LogicFacade {
         return user;
     }
     
-    public static Order createOrder( int length, int width, int height ) {
-        Order order = new Order(width, length, width, height);
+    public static Order createOrder(int id, int length, int width, int height ) throws SQLException {
+        Order order = new Order(id, length, width, height);
+        OrderMapper.createOrder( order );
+        return order;
     }
 
+    public static List<Order> getOrders( int id ) throws SQLException {
+        return OrderMapper.getOrders(id);
+    }
+    
 }

@@ -11,27 +11,22 @@ public class Order {
      * (angives i antal “prikker” huset skal være på hver led), 
      * samt hvor mange klodser man ønsker det skal være højt.
      * 
-     * @param iduser
      * @param length
      * @param width
      * @param height 
      */
-    public Order(int idUser, int length, int width, int height) {
-        this.idUser = idUser;
+    public Order( int length, int width, int height ) {
+        
         this.length = length;
         this.width = width;
         this.height = height;
+        
     }
     
-    private int idUser; // id on the customer who created the order
     private int length; // length is in dots
     private int width; // width is in dots
     private int height; // height is in blocks
     
-    public int getIdUser() {
-        return idUser;
-    }
-
     public int getLength() {
         return length;
     }
