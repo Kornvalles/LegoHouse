@@ -6,17 +6,27 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Welcome page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Welcome to Sem 2</h1>
-        
-        <table>
-            <tr><td>Login</td>
-                <td>
+
+        <div class="jumbotron text-center">
+            <h1>Lego House Shop</h1>
+            <p>Welcome to the shop</p> 
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Login</h3>
                     <form name="login" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="login">
                         Email:<br>
@@ -27,9 +37,9 @@
                         <br>
                         <input type="submit" value="Submit">
                     </form>
-                </td>
-                <td>Or Register</td>
-                <td>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Or Register</h3>
                     <form name="register" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="register">
                         Email:<br>
@@ -43,14 +53,19 @@
                         <br>
                         <input type="submit" value="Submit">
                     </form>
-                </td>
-            </tr>
-        </table>
-        <% String error = (String) request.getAttribute( "error");
-           if ( error != null) { 
-               out.println("<H2>Error!!</h2>");
-               out.println(error);
-           }
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column 3</h3>        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                </div>
+            </div>
+        </div>
+        <% String error = (String) request.getAttribute("error");
+            if (error != null) {
+                out.println("<H2>Error!!</h2>");
+                out.println(error);
+            }
         %>
     </body>
 </html>
