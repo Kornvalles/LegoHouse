@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class OrderMapper {
     
-    public static void createOrder( Order order ) throws SQLException {
+    public static void createOrder( Order order ) throws LoginSampleException {
         try {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO Orders (idusers, length, width, height) VALUES (?, ?, ?, ?)";
@@ -28,11 +28,11 @@ public class OrderMapper {
             ps.setInt( 4, order.getHeight() );
             ps.executeUpdate();
         } catch ( SQLException | ClassNotFoundException ex ) {
-            throw new SQLException(ex.getMessage());
+            throw new LoginSampleException( ex.getMessage() );
         }
     }
     
-    public static List<Order> getOrders( int id ) throws SQLException {
+    public static List<Order> getOrders( int id ) throws LoginSampleException    {
         List<Order> orders = new ArrayList<>();
         try {
             Connection con = Connector.connection();
@@ -47,8 +47,8 @@ public class OrderMapper {
                 Order order = new Order(id, length, width, heigth);
                 orders.add(order);
             }
-        } catch ( ClassNotFoundException | SQLException ex ) {
-            throw new SQLException(ex.getMessage());
+        } catch ( SQLException | ClassNotFoundException ex ) {
+            throw new LoginSampleException( ex.getMessage() );
         }
         return orders;
     }

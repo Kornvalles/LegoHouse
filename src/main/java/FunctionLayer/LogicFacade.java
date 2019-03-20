@@ -21,13 +21,12 @@ public class LogicFacade {
         return user;
     }
     
-    public static Order createOrder(int id, int length, int width, int height ) throws SQLException {
+    public static void createOrder(int id, int length, int width, int height ) throws LoginSampleException {
         Order order = new Order(id, length, width, height);
         OrderMapper.createOrder( order );
-        return order;
     }
 
-    public static List<Order> getOrders( int id ) throws SQLException {
+    public static List<Order> getOrders( int id ) throws LoginSampleException  {
         return OrderMapper.getOrders(id);
     }
     

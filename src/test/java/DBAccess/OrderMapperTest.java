@@ -66,7 +66,7 @@ public class OrderMapperTest {
     }
     
     @Test
-    public void testCreateOrder() throws SQLException {
+    public void testCreateOrder() throws LoginSampleException {
         // Can we create a new user - Notice, if login fails, this will fail
         // but so would login01, so this is OK
         Order original = new Order(1, 13, 9, 4);

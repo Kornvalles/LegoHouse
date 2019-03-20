@@ -2,7 +2,12 @@ PresentationLayer/Login.class
 PresentationLayer/FrontController.class
 FunctionLayer/LogicFacade.class
 PresentationLayer/Register.class
+PresentationLayer/OrderControl.class
+DataLayer/UserMapper.class
 PresentationLayer/UnknownCommand.class
 PresentationLayer/Command.class
+DataLayer/OrderMapper.class
+FunctionLayer/Order.class
 FunctionLayer/User.class
+DataLayer/Connector.class
 FunctionLayer/LoginSampleException.class

@@ -23,20 +23,21 @@
             <p>You are now logged in as a customer of our wonderful site.</p> 
         </div>
 
-            <div class="text-center">
-                <h2>Byg Legohus</h2>
-                <form name="createOrder" action="FrontController" method="POST">
-                    Længde:<br>
-                    <input type="number" name="length">
-                    <br>
-                    Bredde:<br>
-                    <input type="number" name="width">
-                    <br>
-                    Højde:<br>
-                    <input type="number" name="height">
-                    <br>
-                    <input type="submit" value="Bestil">
-                </form>
-            </div>
+        <div class="text-center">
+            <h2>Byg Legohus</h2>
+            <form name="createOrder" action="FrontController" method="POST">
+                <input type="hidden" name="command" value="order">
+                Længde:<br>
+                <input type="number" name="length">
+                <br>
+                Bredde:<br>
+                <input type="number" name="width">
+                <br>
+                Højde:<br>
+                <input type="number" name="height">
+                <br>
+                <input type="submit" value="Bestil">
+            </form>
+        </div>
     </body>
 </html>
