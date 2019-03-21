@@ -21,19 +21,16 @@ public class OrderControl extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
         
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-        
-        String reqHeight = request.getParameter("height");
-        String reqWidth = request.getParameter("width");
-        String reqLength = request.getParameter("length");
-        int height = Integer.parseInt(reqHeight);
-        int width = Integer.parseInt(reqWidth);
-        int length = Integer.parseInt(reqLength);
-        LogicFacade.createOrder(user.getId(), length, width, height);
-        session.setAttribute( "user", user );
-        session.setAttribute( "role", user.getRole() );
-        return user.getRole() + "page";
+            HttpSession session = request.getSession();
+            User user = (User) session.getAttribute("user");
+            String reqHeight = request.getParameter("height");
+            String reqWidth = request.getParameter("width");
+            String reqLength = request.getParameter("length");
+            int height = Integer.parseInt(reqHeight);
+            int width = Integer.parseInt(reqWidth);
+            int length = Integer.parseInt(reqLength);
+            LogicFacade.createOrder(user.getId(), length, width, height);
+            return user.getRole() + "page";
+            
     }
-
 }
