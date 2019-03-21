@@ -31,11 +31,17 @@
             <h1>Hello <%=user.getEmail()%></h1>
             <p>You are now logged in as a customer of our wonderful site.</p> 
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2>Byg Legohus</h2>
+                    <form method="POST" action="FrontController">
+                        <input type="hidden" name="command" value="login">
+                        <input type="hidden" name="origin" value="logout">
+                        <input type="submit" value="Log Out"/>
+                    </form>
+                </div>
+                <div class="col-sm-8" style="background-color:lavender;">
+                    <h2>Byg Legohus</h2><br>
                     <form name="createOrder" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="order">
                         Længde:
@@ -43,12 +49,12 @@
                         Bredde:
                         <input type="number" name="width">
                         Højde:
-                        <input type="number" name="height">
+                        <input type="number" name="height"><br><br>
                         <input type="submit" value="Bestil">
                     </form>
                 </div>
                 <div class="col">
-                    <table border="3" width="2" cellspacing="2" cellpadding="2" id="invoice" class="display">
+                    <table border="3" width="2" cellspacing="2" cellpadding="2" id="invoice" class="table table-dark">
                         <thead>
                             <tr>
                                 <th>Højde</th>

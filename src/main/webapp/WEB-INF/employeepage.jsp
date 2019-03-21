@@ -20,7 +20,8 @@
             <p>You are now logged in as an employee of our wonderful site.</p> 
         </div>
         <form method="POST" action="FrontController">
-            <input type="hidden" name="command" value="logout">
+            <input type="hidden" name="command" value="login">
+            <input type="hidden" name="origin" value="logout">
             <input type="submit" value="Log Out"/>
         </form>
     </body>

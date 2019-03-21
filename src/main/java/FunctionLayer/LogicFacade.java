@@ -21,13 +21,19 @@ public class LogicFacade {
         return user;
     }
     
-    public static void createOrder(int id, int length, int width, int height ) throws LoginSampleException {
+    public static void createOrder( int id, int length, int width, int height ) throws LoginSampleException {
         Order order = new Order(id, length, width, height);
         OrderMapper.createOrder( order );
     }
 
     public static List<Order> getOrders( int id ) throws LoginSampleException  {
         return OrderMapper.getOrders(id);
+    }
+    
+    public static void sendOrder( Order order ) {
+        if ( order.isShipped() == false ) {
+            order.setShipped(true);
+        }
     }
     
 }

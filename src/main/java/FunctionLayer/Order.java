@@ -27,6 +27,7 @@ public class Order {
     private int length; // length is in dots
     private int width; // width is in dots
     private int height; // height is in blocks
+    private boolean shipped;
     
     public int getIdUser() {
         return idUser;
@@ -54,6 +55,14 @@ public class Order {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public boolean isShipped() {
+        return shipped;
+    }
+
+    public void setShipped(boolean isSent) {
+        this.shipped = isSent;
     }
     
 }
