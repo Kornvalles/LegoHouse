@@ -25,7 +25,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col">
                     <h3>Login</h3>
                     <form name="login" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="login">
@@ -37,8 +37,14 @@
                         <br>
                         <input type="submit" value="Submit">
                     </form>
+                    <% String error = (String) request.getAttribute("error");
+                        if (error != null) {
+                            out.println("<H2>Error!!</h2>");
+                            out.println(error);
+                        }
+                    %>
                 </div>
-                <div class="col-sm-4">
+                <div class="col">
                     <h3>Or Register</h3>
                     <form name="register" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="register">
@@ -54,18 +60,7 @@
                         <input type="submit" value="Submit">
                     </form>
                 </div>
-                <div class="col-sm-4">
-                    <h3>Column 3</h3>        
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                </div>
             </div>
         </div>
-        <% String error = (String) request.getAttribute("error");
-            if (error != null) {
-                out.println("<H2>Error!!</h2>");
-                out.println(error);
-            }
-        %>
     </body>
 </html>

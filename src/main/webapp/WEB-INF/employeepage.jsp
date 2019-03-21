@@ -4,16 +4,24 @@
     Author     : kasper
 --%>
 
+<%@page import="FunctionLayer.LogicFacade"%>
+<%@page import="FunctionLayer.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Employee home page</title>
-    </head>
-    <body>
-        
-        <h1>Hello <%=request.getParameter( "email")%> </h1>
-        You are now logged in as a EMPLOYEE of our wonderful site.
+<jsp:include page='/WEB-INF/siteheader.jsp'></jsp:include>
+    <!DOCTYPE html>
+    <html>
+        <body>
+        <%
+            User user = (User) session.getAttribute("user");
+            LogicFacade lf = new LogicFacade();
+        %>
+        <div class="jumbotron text-center">
+            <h1>Hello <%=user.getEmail()%></h1>
+            <p>You are now logged in as an employee of our wonderful site.</p> 
+        </div>
+        <form method="POST" action="FrontController">
+            <input type="hidden" name="command" value="logout">
+            <input type="submit" value="Log Out"/>
+        </form>
     </body>
 </html>
