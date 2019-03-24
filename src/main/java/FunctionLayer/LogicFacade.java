@@ -21,6 +21,10 @@ public class LogicFacade {
         return user;
     }
     
+    public static List<User> getUsers() throws LoginSampleException {
+        return UserMapper.getUsers();
+    }
+    
     public static void createOrder( int id, int length, int width, int height ) throws LoginSampleException {
         Order order = new Order(id, length, width, height);
         OrderMapper.createOrder( order );
