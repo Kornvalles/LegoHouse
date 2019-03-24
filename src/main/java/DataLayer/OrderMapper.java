@@ -53,4 +53,17 @@ public class OrderMapper {
         return orders;
     }
     
+    public static boolean shipOrder( Order order ) throws LoginSampleException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "UPDATE `LegoHouse`.`orders` SET `isSent` = '1' WHERE (`id` = '?')";
+            PreparedStatement ps = con.prepareStatement( SQL );
+            ps.setInt( 1, order.getId() );
+            ps.executeQuery();
+        } catch ( SQLException | ClassNotFoundException ex ) {
+            throw new LoginSampleException( ex.getMessage() );
+        }
+        return order.isShipped();
+    }
+    
 }

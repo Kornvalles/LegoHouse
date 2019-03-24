@@ -34,10 +34,8 @@ public class LogicFacade {
         return OrderMapper.getOrders(id);
     }
     
-    public static void sendOrder( Order order ) {
-        if ( order.isShipped() == false ) {
-            order.setShipped(true);
-        }
+    public static boolean shipOrder( Order order ) throws LoginSampleException {
+        return OrderMapper.shipOrder(order);
     }
     
 }

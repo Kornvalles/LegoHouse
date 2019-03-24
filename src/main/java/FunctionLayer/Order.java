@@ -23,6 +23,7 @@ public class Order {
         this.height = height;
     }
     
+    private int id;
     private int idUser; // id on the customer who created the order
     private int length; // length is in dots
     private int width; // width is in dots
@@ -63,6 +64,14 @@ public class Order {
 
     public void setShipped(boolean isSent) {
         this.shipped = isSent;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
 }
