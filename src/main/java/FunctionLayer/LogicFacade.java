@@ -2,7 +2,6 @@ package FunctionLayer;
 
 import DataLayer.OrderMapper;
 import DataLayer.UserMapper;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
