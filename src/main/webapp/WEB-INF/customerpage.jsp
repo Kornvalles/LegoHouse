@@ -44,6 +44,7 @@
                     <h2>Byg Legohus</h2><br>
                     <form name="createOrder" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="order">
+                        <input type="hidden" name="origin" value="create">
                         Længde:
                         <input type="number" name="length">
                         Bredde:
