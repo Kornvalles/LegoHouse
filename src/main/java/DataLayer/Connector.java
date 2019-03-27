@@ -25,7 +25,7 @@ public class Connector {
         singleton = con;
     }
 
-    public static Connection connection() throws SQLException, ClassNotFoundException {
+    public static synchronized Connection connection() throws SQLException, ClassNotFoundException {
         if (singleton == null) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
