@@ -23,6 +23,7 @@ public class Connector {
 
     public static void setConnection(Connection con) {
         //Test
+        //Test 2.0
         singleton = con;
     }
 
